@@ -1,7 +1,9 @@
 services:
-  nginx:
-    image: nginx:latest
-    build: .
+  web:
+    image: nginx:https-for-stirling
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
     ports:
       - "443:443"
     volumes:
@@ -10,4 +12,7 @@ services:
       - ./ssl/server.key:/nginx/server.key
 
   app:
-    image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
+    image: stirlingpdf:https-for-stirling
+    build:
+      context: .
+      dockerfile: stirlingpdf.dockerfile
