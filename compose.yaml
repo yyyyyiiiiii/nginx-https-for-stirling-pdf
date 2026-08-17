@@ -16,3 +16,9 @@ services:
     build:
       context: .
       dockerfile: stirlingpdf.dockerfile
+
+  anubis:
+    image: anubis:anubis-for-smth
+    build:
+      context: .
+      dockerfile: anubis.dockerfile
