@@ -1,4 +1,4 @@
-# Stirling.pdf + nginx ssl
+# Stirling.pdf + nginx ssl + Anubis...
 
 ## Simple generate key + crt
 
