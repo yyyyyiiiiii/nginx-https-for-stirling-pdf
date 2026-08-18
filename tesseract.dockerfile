@@ -2,7 +2,9 @@ FROM alpine:latest
 
 RUN apk update
 
-RUN apk search 'tesseract' | while IFS= read -r pkg; do \
-      name="${pkg%-*-*}"; \
-      apk add "${name}"; \
-    done
+RUN pkgs="" && \
+    apk search 'tesseract' | while IFS= read -r name; do \
+      pkg="${name%-*-*}"; \
+      pkgs="${pkgs} ${pkg}"; \
+    done && \
+    apk add $pkgs
