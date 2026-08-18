@@ -1,3 +1,6 @@
+volumes:
+  shared-storage:
+
 services:
   web:
     image: nginx:https-for-stirling
@@ -16,9 +19,19 @@ services:
     build:
       context: .
       dockerfile: stirlingpdf.dockerfile
+    volumes:
+      - shared-storage:/usr/share/tessdata:ro
 
   anubis:
     image: anubis:anubis-for-smth
     build:
       context: .
       dockerfile: anubis.dockerfile
+
+  tesseract:
+    image: tesseract:tesseract-for-stirling
+    build:
+      context: .
+      dockerfile: tesseract.dockerfile
+    volumes:
+      - shared-storage:/usr/share/tessdata
