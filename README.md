@@ -9,16 +9,25 @@ Plus, all the tesseract data files installed
 mkdir ssl
 # KEY / CERTIFICATE GENERATION
 openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout ssl/server.key -out ss/server.crt
-
 docker compose build
 ```
 
 ## RUN
 
-- `docker compose start`
-- `docker compose up`
+```sh
+docker compose start
+```
+*OR*
+```sh
+docker compose up
+```
 
 ## STOP
 
-- `docker compose stop`
-- `docker compose down`
+```sh
+docker compose stop
+```
+*OR*
+```sh
+docker compose down
+```
