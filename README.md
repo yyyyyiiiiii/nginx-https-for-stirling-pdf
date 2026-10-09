@@ -1,23 +1,24 @@
-# Stirling.pdf + nginx ssl + Anubis...
+# NGINX + STIRLINGPDF
 
-## Simple generate key + crt
+I was bored, so I also deployed [anubis](https://github.com/techaroHQ/anubis)
+Plus, all the tesseract data files installed
+
+## BUILD
 
 ```sh
 mkdir ssl
-cd ssl
-openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout server.key -out server.crt
+# KEY / CERTIFICATE GENERATION
+openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout ssl/server.key -out ss/server.crt
+
+docker compose build
 ```
 
-## Run
+## RUN
 
-```sh
-# docker compose start # to start from saved containers
-docker compose up
-```
+- `docker compose start`
+- `docker compose up`
 
-## Stop
+## STOP
 
-```sh
-# docker compose stop # -> to save
-docker compose down # no save
-```
+- `docker compose stop`
+- `docker compose down`
