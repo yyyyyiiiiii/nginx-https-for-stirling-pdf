@@ -1,6 +1,6 @@
 # NGINX + STIRLINGPDF
 
-I was bored, so I also deployed [anubis](https://github.com/techaroHQ/anubis)
+I was bored, so I also deployed [anubis](https://github.com/techaroHQ/anubis).
 Plus, all the tesseract data files installed
 
 ## BUILD
