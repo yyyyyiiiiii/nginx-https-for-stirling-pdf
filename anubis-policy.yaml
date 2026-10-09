@@ -1,14 +1,9 @@
 # See https://anubis.techaro.lol/docs/admin/configuration/thresholds for more
 # information.
 bots:
-  - name: countries-with-aggressive-scrapers
-    action: WEIGH
-    geoip:
-      countries:
-        - BR
-        - CN
-    weight:
-      adjust: 1
+  - name: any
+    action: CHALLENGE
+    user_agent_regex: .*
 
 thresholds:
 
