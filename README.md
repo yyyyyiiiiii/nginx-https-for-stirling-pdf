@@ -8,7 +8,7 @@ Plus, all the tesseract data files installed
 ```sh
 mkdir ssl
 # KEY / CERTIFICATE GENERATION
-openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout ssl/server.key -out ss/server.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout ssl/server.key -out ssl/server.crt
 docker compose build
 ```
 
